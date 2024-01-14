@@ -16,8 +16,8 @@ print(""" Welcome to...
 
 
 async def handler(websocket, path):
-    client = await websocket.client()
-    print(f"Client connected: {client}")
+    #client = await websocket.client()
+    #print(f"Client connected: {client}")
     message = await websocket.recv()
     print(f"Received message: {message}")
     await websocket.send(f"Hello, {message}!")

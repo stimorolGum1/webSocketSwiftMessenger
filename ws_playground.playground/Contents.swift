@@ -8,14 +8,9 @@ request.addValue("websocket", forHTTPHeaderField: "Upgrade")
 request.addValue("Upgrade", forHTTPHeaderField: "Connection")
 let task = session.webSocketTask(with: request)
 task.resume()
-let message = URLSessionWebSocketTask.Message.string("Hello, server!")
+let message = URLSessionWebSocketTask.Message.string("Привет")
 task.send(message) { error in
     if let error = error {
         print("Error sending message: \(error)")
     }
 }
-
-
-
-
-
